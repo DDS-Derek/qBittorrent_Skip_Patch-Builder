@@ -2,6 +2,11 @@ name: Build qbittorrent
 
 on:
   workflow_dispatch:
+  push:
+    branches:
+      - master
+    paths:
+      - version.json
 
 jobs:
   build:
