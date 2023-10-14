@@ -1,4 +1,6 @@
-FROM ddsderek/qbittorrent_skip_patch:libtorrent-rasterbar AS builder
+ARG REPO_VERSION
+ARG REPO_NAME
+FROM ${REPO_NAME}:${REPO_VERSION} AS builder
 RUN apk upgrade \
     && apk add --no-cache \
        boost-dev \
@@ -11,7 +13,7 @@ RUN apk upgrade \
        tar \
        samurai \
     && rm -rf /tmp/* /var/cache/apk/*
-ARG QBITTORRENT_VERSION=4.5.5
+ARG QBITTORRENT_VERSION
 RUN mkdir -p /tmp/qbittorrent \
     && cd /tmp/qbittorrent \
     && curl -sSL https://github.com/qbittorrent/qBittorrent/archive/refs/tags/release-${QBITTORRENT_VERSION}.tar.gz | tar xz --strip-components 1 \
