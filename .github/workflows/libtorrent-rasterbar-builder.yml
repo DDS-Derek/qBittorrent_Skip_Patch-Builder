@@ -56,7 +56,7 @@ jobs:
                     context: libtorrent-rasterbar
                     file: libtorrent-rasterbar/Dockerfile
                     platforms: |
-                        ${{ matrix.arch_type }}
+                        linux/${{ matrix.arch_type }}
                     push: true
                     tags: ${{ steps.meta.outputs.tags }}
                     labels: ${{ steps.meta.outputs.labels }}
