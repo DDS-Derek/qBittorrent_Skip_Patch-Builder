@@ -1,4 +1,4 @@
-FROM ddsderek/qbittorrent_skip_patch:libtorrent-rasterbar
+FROM ddsderek/qbittorrent_skip_patch:libtorrent-rasterbar AS builder
 RUN apk upgrade \
     && apk add --no-cache \
        boost-dev \
