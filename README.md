@@ -1,7 +1,7 @@
 # qBittorrent 快校版 Docker
 
-此仓库为[DDS-Derek/qBittorrent_Skip_Patch-Docker](https://github.com/DDS-Derek/qBittorrent_Skip_Patch-Docker)的延续维护版本，因为[Ghost-chu](https://github.com/Ghost-chu/qbittorrent-nox-static)大佬已经不再编译`qbittorrent-nox`文件，故重构原项目，对于`qbittorrent-nox`文件进行编译并打包镜像。
-
+此仓库为[DDS-Derek/qBittorrent_Skip_Patch-Docker](https://github.com/DDS-Derek/qBittorrent_Skip_Patch-Docker)的延续维护版本，因为[Ghost-chu](https://github.com/Ghost-chu/qbittorrent-nox-static)大佬已经不再编译快校版`qbittorrent-nox`文件，故重构原项目，对于快校版`qbittorrent-nox`文件进行编译并打包镜像。
+ 
 此项目功能与使用方法和`nevinee/qbittorrent`一致，故详细功能和使用教程[点击这里](https://github.com/DDS-Derek/dockerfiles/tree/master/qbittorrent)查看。
 
 ## 特性
@@ -86,3 +86,13 @@ services:
     #security_opt:       # armv7设备请解除本行和下一行的注释
       #- seccomp=unconfined
 ```
+
+## 感谢
+
+https://github.com/ChisBread/qbittorrent_skip_patch
+
+https://github.com/DDS-Derek/dockerfiles/tree/master/qbittorrent
+
+https://hub.docker.com/r/crazymax/qbittorrent
+
+https://github.com/Ghost-chu/qbittorrent-nox-static
