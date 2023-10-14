@@ -1,4 +1,4 @@
-name: Build libtorrent rasterbar
+name: Build qbittorrent
 
 on:
   workflow_dispatch:
