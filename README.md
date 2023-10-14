@@ -46,6 +46,8 @@ services:
       - BT_PORT=34567     # BT监听端口，可自定义
       - PUID=1000         # 输入id -u可查询，群晖必须改
       - PGID=100          # 输入id -g可查询，群晖必须改
+      - QB_USERNAME=admin
+      - QB_PASSWORD=adminadmin
     ports:
       - 8080:8080        # 冒号左右一致，必须同WEBUI_PORT一样，本文件中的3个8080要改一起改
       - 34567:34567      # 冒号左右一致，必须同BT_PORT一样，本文件中的5个34567要改一起改
@@ -74,6 +76,8 @@ services:
       - BT_PORT=34567     # BT监听端口，可自定义
       - PUID=1000         # 输入id -u可查询，群晖必须改
       - PGID=100          # 输入id -g可查询，群晖必须改
+      - QB_USERNAME=admin
+      - QB_PASSWORD=adminadmin
     ports:
       - 8080:8080        # 冒号左右一致，必须同WEBUI_PORT一样，本文件中的3个8080要改一起改
       - 34567:34567      # 冒号左右一致，必须同BT_PORT一样，本文件中的5个34567要改一起改
