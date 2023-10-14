@@ -1,0 +1,1 @@
+将 https://github.com/Ghost-chu/libtorrent-fast-hash-check 编译为库文件，用来后续进一步编译qbittorrent用的。
