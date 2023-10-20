@@ -1,10 +1,10 @@
 # qBittorrent 快校版 Docker
 
-[![Build libtorrent rasterbar](https://github.com/DDS-Derek/qBittorrent_Skip_Patch-Builder/actions/workflows/libtorrent-rasterbar.yml/badge.svg)](https://github.com/DDS-Derek/qBittorrent_Skip_Patch-Builder/actions/workflows/libtorrent-rasterbar.yml) [![Build qbittorrent](https://github.com/DDS-Derek/qBittorrent_Skip_Patch-Builder/actions/workflows/qbittorrent.yml/badge.svg)](https://github.com/DDS-Derek/qBittorrent_Skip_Patch-Builder/actions/workflows/qbittorrent.yml)
+![Docker Pulls](https://img.shields.io/docker/pulls/ddsderek/qbittorrent_skip_patch.svg?style=for-the-badge&label=pulls&logo=docker)
 
 此仓库为[DDS-Derek/qBittorrent_Skip_Patch-Docker](https://github.com/DDS-Derek/qBittorrent_Skip_Patch-Docker)的延续维护版本，因为[Ghost-chu](https://github.com/Ghost-chu/qbittorrent-nox-static)大佬已经不再编译快校版`qbittorrent-nox`文件，故重构原项目，对于快校版`qbittorrent-nox`文件进行编译并打包镜像。
  
-此项目功能与使用方法和`nevinee/qbittorrent`一致，故详细功能和使用教程[点击这里](https://github.com/DDS-Derek/dockerfiles/tree/master/qbittorrent)查看。
+此项目功能与使用方法和`nevinee/qbittorrent`一致，故详细功能和使用教程[点击这里](https://devome.github.io/blog/p/一款更懂你的-qbittorrent-docker-镜像/)查看。
 
 ## 特性
 
