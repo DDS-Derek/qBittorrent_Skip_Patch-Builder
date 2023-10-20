@@ -1,0 +1,10 @@
+{
+    "DockerHub_Repo_Name": "qbittorrent_skip_patch",
+    "Github_Repo": "DDS-Derek/qBittorrent_Skip_Patch-Builder",
+    "Branches": "master",
+    "Version": "libtorrent-rasterbar",
+    "Dockerfile_Name": "Dockerfile",
+    "ARCH": "linux/amd64,linux/arm64/v8,linux/arm/v7",
+    "ARG": "",
+    "TAG": "--tag ${Dockerhub_Username}/${DockerHub_Repo_Name}:${Version}"
+}
