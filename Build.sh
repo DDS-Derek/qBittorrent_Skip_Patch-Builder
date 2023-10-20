@@ -89,6 +89,12 @@ docker image rm moby/buildkit:buildx-stable-1
 }
 
 function build_image() {
+git clone -b master https://github.com/devome/dockerfiles.git files
+cp -r files/qbittorrent/root root
+cp -r files/qbittorrent/root2 root2
+ls -al
+ls -al root
+ls -al root2
 docker exec -it builder_ddsrem \
     docker buildx build \
     ${ARG} \
@@ -103,6 +109,24 @@ docker exec -it builder_ddsrem \
     --label "org.opencontainers.image.version=${image_version}" \
     --platform ${ARCH} \
     ${TAG} \
+    --push \
+    .
+docker exec -it builder_ddsrem \
+    docker buildx build \
+    --build-arg REPO_NAME=ddsderek/qbittorrent_skip_patch \
+    --build-arg REPO_VERSION=${Version} \
+    --file iyuu.${Dockerfile_Name} \
+    --label "org.opencontainers.image.created=${image_created}" \
+    --label "org.opencontainers.image.description=${image_description}" \
+    --label "org.opencontainers.image.licenses=${image_licenses}" \
+    --label "org.opencontainers.image.revision=${image_revision}" \
+    --label "org.opencontainers.image.source=${image_source}" \
+    --label "org.opencontainers.image.title=${image_title}" \
+    --label "org.opencontainers.image.url=${image_url}" \
+    --label "org.opencontainers.image.version=${image_version}-iyuu" \
+    --platform ${ARCH} \
+    --tag ${Dockerhub_Username}/${DockerHub_Repo_Name}:${Version}-iyuu \
+    --tag ${Dockerhub_Username}/${DockerHub_Repo_Name}:latest-iyuu \
     --push \
     .
 }
