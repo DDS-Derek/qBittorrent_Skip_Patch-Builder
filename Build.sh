@@ -113,7 +113,7 @@ docker exec -it builder_ddsrem \
     .
 docker exec -it builder_ddsrem \
     docker buildx build \
-    --build-arg REPO_NAME=ddsderek/qbittorrent_skip_patch \
+    --build-arg REPO_NAME=${Dockerhub_Username}/${DockerHub_Repo_Name} \
     --build-arg REPO_VERSION=${Version} \
     --file iyuu.${Dockerfile_Name} \
     --label "org.opencontainers.image.created=${image_created}" \
