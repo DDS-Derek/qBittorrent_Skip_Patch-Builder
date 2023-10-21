@@ -73,6 +73,9 @@ docker run -d \
     --workdir /build \
     dockerhub.ddsrem.in:998/catthehacker/ubuntu@sha256:5c5b25525142c44ed8903e13ebcb4f9950a492402bb33d4ba493ca51c1f27dde tail -f /dev/null
 docker exec -it builder_ddsrem uname -a
+docker exec -it builder_ddsrem mkdir -p ${HOME}/.docker/cli-plugins
+docker exec -it builder_ddsrem curl -sL https://github.com/christian-korneck/docker-pushrm/releases/download/v1.9.0/docker-pushrm_linux_amd64 -o ${HOME}/.docker/cli-plugins/docker-pushrm
+docker exec -it builder_ddsrem chmod +x ${HOME}/.docker/cli-plugins/docker-pushrm
 docker exec -it builder_ddsrem docker pull tonistiigi/binfmt
 docker exec -it builder_ddsrem docker run --privileged --rm tonistiigi/binfmt --install all
 docker exec -it builder_ddsrem docker buildx create --name builder --use 2>/dev/null || docker buildx use builder
