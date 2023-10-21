@@ -39,6 +39,14 @@ RUN echo "Copy to /out" \
     && mkdir -p /out/usr/lib /out/usr/bin \
     && cp -d /usr/local/lib/libtorrent-rasterbar.so* /out/usr/lib \
     && cp /usr/local/bin/qbittorrent-nox /out/usr/bin
+RUN echo "Write dependency version" \
+    && OpenSSL=$(apk version openssl | sed -n '2p' | awk -F'= ' '{print $2}' | awk -F'-' '{print $1}') \
+    && Boost=$(apk version boost-dev | sed -n '2p' | awk -F'= ' '{print $2}' | awk -F'-' '{print $1}') \
+    && Libtorrent=RC_1_2 \
+    && Qt=$(apk version qt6-qtbase | sed -n '2p' | awk -F'= ' '{print $2}' | awk -F'-' '{print $1}') \
+    && zlib=$(apk version zlib | sed -n '2p' | awk -F'= ' '{print $2}' | awk -F'-' '{print $1}') \
+    && echo -e '{\n    "OpenSSL": "'$OpenSSL'",\n    "Boost": "'$Boost'",\n    "Libtorrent": "'$Libtorrent'",\n    "Qt": "'$Qt'",\n    "zlib": "'$zlib'"\n}' \
+    && echo -e '{\n    "OpenSSL": "'$OpenSSL'",\n    "Boost": "'$Boost'",\n    "Libtorrent": "'$Libtorrent'",\n    "Qt": "'$Qt'",\n    "zlib": "'$zlib'"\n}' > /out/usr/bin/dependency-version.json
 
 FROM alpine:3.18
 ENV QBT_PROFILE=/home/qbittorrent \
