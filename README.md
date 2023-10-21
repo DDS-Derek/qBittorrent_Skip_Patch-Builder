@@ -1,5 +1,7 @@
 # qBittorrent 快校版 Docker
 
+# 本镜像为快校版qBittorrent，非官方qBittorrent，使用者请自行承担风险！
+
 ![Docker Pulls](https://img.shields.io/docker/pulls/ddsderek/qbittorrent_skip_patch.svg?style=for-the-badge&label=pulls&logo=docker)
 
 此仓库为[DDS-Derek/qBittorrent_Skip_Patch-Docker](https://github.com/DDS-Derek/qBittorrent_Skip_Patch-Docker)的延续维护版本，因为[Ghost-chu](https://github.com/Ghost-chu/qbittorrent-nox-static)大佬已经不再编译快校版`qbittorrent-nox`文件，故重构原项目，对于快校版`qbittorrent-nox`文件进行编译并打包镜像。
