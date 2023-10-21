@@ -29,7 +29,7 @@
 ## 部署
 
 **latest**
-```
+```shell
 version: "3.0"
 services:
   qbittorrent:
@@ -59,7 +59,7 @@ services:
 ```
 
 **latest-iyuu**
-```
+```yaml
 version: "3.0"
 services:
   qbittorrent:
@@ -87,6 +87,14 @@ services:
       - 8787:8787        # iyuu Web
     #security_opt:       # armv7设备请解除本行和下一行的注释
       #- seccomp=unconfined
+```
+
+## 依赖版本
+
+通过执行下面这条命令可以查看当前镜像的依赖版本。
+
+```shell
+docker exec -it [你的qBittorrent容器名] cat /out/usr/bin/dependency-version.json
 ```
 
 ## 感谢
