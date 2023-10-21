@@ -97,7 +97,7 @@ services:
 2. 通过执行下面这条命令可以查看当前镜像的依赖版本。
 
 ```shell
-docker exec -it [你的qBittorrent容器名] cat /out/usr/bin/dependency-version.json
+docker exec -it [你的qBittorrent容器名] cat /usr/bin/dependency-version.json
 ```
 
 ## 感谢
