@@ -93,7 +93,8 @@ services:
 
 ## 依赖版本
 
-通过执行下面这条命令可以查看当前镜像的依赖版本。
+1. `Latest`标签依赖版本[点击此处](https://raw.githubusercontent.com/DDS-Derek/qBittorrent_Skip_Patch-Builder/master/dependency-version.json)查看
+2. 通过执行下面这条命令可以查看当前镜像的依赖版本。
 
 ```shell
 docker exec -it [你的qBittorrent容器名] cat /out/usr/bin/dependency-version.json
