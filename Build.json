@@ -5,6 +5,6 @@
     "Version": "$(jq -r '.qBittorrent_Version' version.json)",
     "Dockerfile_Name": "Dockerfile",
     "ARCH": "linux/amd64,linux/arm64/v8,linux/arm/v7",
-    "ARG": "--build-arg REPO_VERSION=libtorrent-rasterbar --build-arg REPO_NAME=ddsderek/qbittorrent_skip_patch --build-arg QBITTORRENT_VERSION=${Version}",
+    "ARG": "--build-arg REPO_VERSION=libtorrent-rasterbar --build-arg REPO_NAME=${Dockerhub_Username}/${DockerHub_Repo_Name} --build-arg QBITTORRENT_VERSION=${Version}",
     "TAG": "--tag ${Dockerhub_Username}/${DockerHub_Repo_Name}:${Version} --tag ${Dockerhub_Username}/${DockerHub_Repo_Name}:latest"
 }
