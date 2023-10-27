@@ -5,8 +5,8 @@ RUN apk upgrade \
     && apk add --no-cache \
        boost-dev \
        openssl-dev \
-       qt6-qtbase-dev \
-       qt6-qttools-dev \
+       qt5-qtbase-dev \
+       qt5-qttools-dev \
        g++ \
        cmake \
        curl \
@@ -26,11 +26,12 @@ RUN mkdir -p /tmp/qbittorrent \
        -DSTACKTRACE=OFF \
        -DDBUS=OFF \
        -DGUI=OFF \
-       -DQT6=ON \
+       -DQT6=OFF \
        -Brelease \
        -GNinja \
-    && cmake --build release -j $(nproc) \
-    && cmake --install release \
+    && cd release \
+    && ninja -j${JNPROC} \
+    && ninja install \
     && ls -al /usr/local/bin/ \
     && qbittorrent-nox --help
 RUN echo "Copy to /out" \
@@ -70,8 +71,7 @@ RUN sed -i 's/dl-cdn.alpinelinux.org/mirrors.bfsu.edu.cn/g' /etc/apk/repositorie
        jq \
        openssl \
        python3 \
-       qt6-qtbase \
-       qt6-qtbase-sqlite \
+       qt5-qtbase \
        shadow \
        su-exec \
        tini \

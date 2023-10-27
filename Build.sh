@@ -129,7 +129,6 @@ docker exec -it builder_ddsrem \
     --label "org.opencontainers.image.version=${image_version}-iyuu" \
     --platform ${ARCH} \
     --tag ${Dockerhub_Username}/${DockerHub_Repo_Name}:${Version}-iyuu \
-    --tag ${Dockerhub_Username}/${DockerHub_Repo_Name}:latest-iyuu \
     --push \
     .
 }
