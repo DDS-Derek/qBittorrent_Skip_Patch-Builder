@@ -27,11 +27,10 @@ RUN mkdir -p /tmp/qbittorrent \
        -DDBUS=OFF \
        -DGUI=OFF \
        -DQT6=OFF \
-       -QT6=OFF \
        -Brelease \
        -GNinja \
     && cd release \
-    && ninja -j${JNPROC} \
+    && ninja -j$(nproc) \
     && ninja install \
     && ls -al /usr/local/bin/ \
     && qbittorrent-nox --help
