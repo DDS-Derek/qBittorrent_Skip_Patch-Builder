@@ -27,6 +27,7 @@ RUN mkdir -p /tmp/qbittorrent \
        -DDBUS=OFF \
        -DGUI=OFF \
        -DQT6=OFF \
+       -QT6=OFF \
        -Brelease \
        -GNinja \
     && cd release \
