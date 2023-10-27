@@ -45,7 +45,7 @@ RUN echo "Write dependency version" \
     && OpenSSL=$(apk version openssl-dev | sed -n '2p' | awk -F'= ' '{print $2}' | awk -F'-' '{print $1}') \
     && Boost=$(apk version boost-dev | sed -n '2p' | awk -F'= ' '{print $2}' | awk -F'-' '{print $1}') \
     && Libtorrent=RC_1_2 \
-    && Qt=$(apk version qt6-qtbase-dev | sed -n '2p' | awk -F'= ' '{print $2}' | awk -F'-' '{print $1}') \
+    && Qt=$(apk version qt5-qtbase-dev | sed -n '2p' | awk -F'= ' '{print $2}' | awk -F'-' '{print $1}') \
     && zlib=$(apk version zlib | sed -n '2p' | awk -F'= ' '{print $2}' | awk -F'-' '{print $1}') \
     && echo -e '{\n    "OpenSSL": "'$OpenSSL'",\n    "Boost": "'$Boost'",\n    "Libtorrent": "'$Libtorrent'",\n    "Qt": "'$Qt'",\n    "zlib": "'$zlib'"\n}' \
     && echo -e '{\n    "OpenSSL": "'$OpenSSL'",\n    "Boost": "'$Boost'",\n    "Libtorrent": "'$Libtorrent'",\n    "Qt": "'$Qt'",\n    "zlib": "'$zlib'"\n}' > /out/usr/bin/dependency-version.json \
