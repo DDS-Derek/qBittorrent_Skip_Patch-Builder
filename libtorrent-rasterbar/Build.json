@@ -4,7 +4,7 @@
     "Branches": "master",
     "Version": "libtorrent-rasterbar",
     "Dockerfile_Name": "Dockerfile",
-    "ARCH": "linux/amd64,linux/arm64/v8,linux/arm/v7",
+    "ARCH": "linux/386,linux/amd64,linux/arm64/v8,linux/arm/v7,linux/arm/v6,linux/ppc64le,linux/s390x",
     "ARG": "",
     "TAG": "--tag ${Dockerhub_Username}/${DockerHub_Repo_Name}:${Version}"
 }
