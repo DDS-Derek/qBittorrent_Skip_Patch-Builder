@@ -87,7 +87,7 @@ docker exec -it ${Builder_Name} docker login --password ${Dockerhub_Password} --
 
 function clear_build() {
 docker exec -it ${Builder_Name} docker logout
-docker exec -it ${Builder_Name} docker buildx rm builder
+docker exec -it ${Builder_Name} docker buildx rm ${Builder_Name}
 docker stop ${Builder_Name}
 docker rm ${Builder_Name}
 docker image rm moby/buildkit:buildx-stable-1
