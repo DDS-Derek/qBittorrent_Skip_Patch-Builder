@@ -29,9 +29,8 @@ RUN mkdir -p /tmp/qbittorrent \
        -DQT6=OFF \
        -Brelease \
        -GNinja \
-    && cd release \
-    && ninja -j$(nproc) \
-    && ninja install \
+    && cmake --build release -j $(nproc) \
+    && cmake --install release \
     && ls -al /usr/local/bin/ \
     && qbittorrent-nox --help
 RUN echo "Copy to /out" \
