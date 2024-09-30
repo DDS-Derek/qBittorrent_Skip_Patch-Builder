@@ -1,5 +1,5 @@
 {
-    "OpenSSL": "3.3.1",
+    "OpenSSL": "3.3.2",
     "Boost": "1.84.0",
     "Libtorrent": "RC_1_2",
     "Qt": "6.6.3",
