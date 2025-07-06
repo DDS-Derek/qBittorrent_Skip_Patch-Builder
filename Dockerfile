@@ -12,13 +12,11 @@ RUN apk upgrade \
        curl \
        tar \
        samurai \
-       patch \
     && rm -rf /tmp/* /var/cache/apk/*
 ARG QBITTORRENT_VERSION
 RUN mkdir -p /tmp/qbittorrent \
     && cd /tmp/qbittorrent \
     && curl -sSL https://github.com/qbittorrent/qBittorrent/archive/refs/tags/release-${QBITTORRENT_VERSION}.tar.gz | tar xz --strip-components 1 \
-    && curl -sSL https://github.com/qbittorrent/qBittorrent/commit/101f35dcf2898afd52c6721066e1d71f6cef9c6e.patch | patch -p1 \
     && cmake \
        -DCMAKE_BUILD_TYPE=Release \
        -DCMAKE_INTERPROCEDURAL_OPTIMIZATION=ON \
