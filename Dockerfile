@@ -7,6 +7,7 @@ RUN apk upgrade \
        openssl-dev \
        qt6-qtbase-dev \
        qt6-qttools-dev \
+       qt6-qtbase-private-dev \
        g++ \
        cmake \
        curl \
