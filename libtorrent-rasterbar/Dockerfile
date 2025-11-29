@@ -13,7 +13,7 @@ RUN apk add --no-cache --virtual .build \
       git && \
    mkdir -p /tmp/libtorrent-rasterbar && \
    cd /tmp/libtorrent-rasterbar && \
-   git clone -b RC_1_2 https://github.com/Ghost-chu/libtorrent-fast-hash-check.git /tmp/libtorrent-rasterbar && \
+   git clone -b RC_1_2 https://github.com/DDSRem-Dev/libtorrent-fast-hash-check.git /tmp/libtorrent-rasterbar && \
    cmake \
       -DCMAKE_BUILD_TYPE=Release \
       -DCMAKE_CXX_STANDARD=17 \
