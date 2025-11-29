@@ -1,6 +1,6 @@
 {
     "DockerHub_Repo_Name": "qbittorrent_skip_patch",
-    "Github_Repo": "DDS-Derek/qBittorrent_Skip_Patch-Builder",
+    "Github_Repo": "DDSRem-Dev/qBittorrent_Skip_Patch-Builder",
     "Branches": "master",
     "Version": "$(jq -r '.qBittorrent_Version' version.json)",
     "Dockerfile_Name": "Dockerfile",

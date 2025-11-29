@@ -4,7 +4,7 @@
 
 ![Docker Pulls](https://img.shields.io/docker/pulls/ddsderek/qbittorrent_skip_patch.svg?style=for-the-badge&label=pulls&logo=docker)
 
-此仓库为[DDS-Derek/qBittorrent_Skip_Patch-Docker](https://github.com/DDS-Derek/qBittorrent_Skip_Patch-Docker)的延续维护版本，因为[Ghost-chu](https://github.com/Ghost-chu/qbittorrent-nox-static)大佬已经不再编译快校版`qbittorrent-nox`文件，故重构原项目，对于快校版`qbittorrent-nox`文件进行编译并打包镜像。
+此仓库为[DDSRem-Dev/qBittorrent_Skip_Patch-Docker](https://github.com/DDSRem-Dev/qBittorrent_Skip_Patch-Docker)的延续维护版本，因为[Ghost-chu](https://github.com/Ghost-chu/qbittorrent-nox-static)大佬已经不再编译快校版`qbittorrent-nox`文件，故重构原项目，对于快校版`qbittorrent-nox`文件进行编译并打包镜像。
  
 此项目功能与使用方法和`nevinee/qbittorrent`一致，故详细功能和使用教程[点击这里](https://evine.win/p/docker-install-qbittorrent/)查看。
 
@@ -93,7 +93,7 @@ services:
 
 ## 依赖版本
 
-1. `Latest`标签依赖版本[点击此处](https://raw.githubusercontent.com/DDS-Derek/qBittorrent_Skip_Patch-Builder/master/dependency-version.json)查看
+1. `Latest`标签依赖版本[点击此处](https://raw.githubusercontent.com/DDSRem-Dev/qBittorrent_Skip_Patch-Builder/master/dependency-version.json)查看
 2. 通过执行下面这条命令可以查看当前镜像的依赖版本。
 
 ```shell
@@ -104,7 +104,7 @@ docker exec -it [你的qBittorrent容器名] cat /usr/bin/dependency-version.jso
 
 https://github.com/ChisBread/qbittorrent_skip_patch
 
-https://github.com/DDS-Derek/dockerfiles/tree/master/qbittorrent
+https://github.com/DDSRem-Dev/dockerfiles/tree/master/qbittorrent
 
 https://hub.docker.com/r/crazymax/qbittorrent
 
